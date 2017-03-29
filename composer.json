@@ -1,0 +1,38 @@
+{
+    "name": 					"podemos/gravity_import",
+    "description": 				"Importador de datos de Gravity Forms",
+    "keywords":					["wordpress", "plugin", "importer"],
+    "type" : 					"wordpress-plugin",
+    "repositories":[
+    	{
+	        "type": "package",
+	        "package": {
+	          "name": "stevehenty/gravityformsaggregator",
+	          "version": "master",
+	          "source": {
+	            "url": "https://github.com/stevehenty/gravityformsaggregator.git",
+	            "type": "git",
+	            "reference": "master"
+	          }
+	        }
+	    }
+    ], 
+	    
+    "require" : {
+        "composer/installers" : 				"~1.2",
+        "php" : 								">=5.4",
+        "stevehenty/gravityformsaggregator":	"*"
+    },
+    "extra" : {
+        "installer-name" : "gravity-import"
+    },
+    "homepage" : "https://github.com/podemos-info/plugins",
+    "support": {
+        "issues": "https://github.com/podemos-info/plugins/issues",
+        "source": "https://github.com/podemos-info/plugins/tree/master/modules/wordpress/podemos-gravity-import"
+    },
+    "autoload": {
+    	"classmap": [ "src/", "vendor/stevehenty/gravityformsaggregator/"]
+    },
+    "minimum-stability": 	"dev"
+}
